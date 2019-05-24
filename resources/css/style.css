@@ -214,7 +214,7 @@ nav .mob-disp {
 }
 
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
     body {
       background-color: blue;
       color: white;
@@ -222,6 +222,7 @@ nav .mob-disp {
 
     .main {
         background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/tortoiseshell-optics/resources/images/glasses-bg.png");
+        width: 768px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -231,7 +232,7 @@ nav .mob-disp {
     }
     
     .header-container {
-        width: 100%;
+        width: 768px;
         margin: 0 auto;
         height: 3rem;
         background-color: cadetblue;
@@ -268,18 +269,23 @@ nav .mob-disp {
     
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 425px) {
+
+    body {
+        background-color: red;
+    }
+
     .main {
         background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/tortoiseshell-optics/resources/images/glasses-bg.png");
         background-position: 20%;
         background-repeat: no-repeat;
         background-size: cover;
-        position: relative;
         margin-bottom: 3rem;
         height: 17rem;
     }
 
     .header-container {
+        position: fixed;
         width: 100%;
         margin: 0 auto;
         height: 3rem;
