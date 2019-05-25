@@ -2,7 +2,10 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
     font-size: 18px;
     line-height: 1.4;
     font-family: Helvetica;
@@ -15,19 +18,18 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
     margin-bottom: 3rem;
 }
 
 .header-container {
     display: flex;
     align-items: center;
-    width: 960px;
+    width: 75%;
     margin-top: 1rem;
-    margin-left: 160px;
-    margin-right: 160px;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
     height: 3rem;
-    position: fixed;
+    position: absolute;
     background-color: cadetblue;
 }
 
@@ -56,7 +58,7 @@ nav span a {
     font-size: 1rem;
 }
 
-nav .mob-disp {
+.mob-disp {
     display: none;
 }
 
@@ -213,85 +215,83 @@ nav .mob-disp {
     padding-top: 4rem;
 }
 
-
-@media screen and (max-width: 768px) {
-    body {
-      background-color: blue;
-      color: white;
-    }
-
+@media screen and (max-width: 959px) {
     .main {
         background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/tortoiseshell-optics/resources/images/glasses-bg.png");
-        width: 768px;
-        background-position: center;
+        height: 22rem;
+        background-position: cover;
         background-repeat: no-repeat;
         background-size: cover;
-        position: relative;
         margin-bottom: 3rem;
-        height: 22rem;
     }
     
     .header-container {
-        width: 768px;
-        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
         height: 3rem;
+        position: absolute;
         background-color: cadetblue;
     }
-    
-    .logo img {
-        margin-right: 2rem;
-        margin-left: 1rem;
-        height: 1.5rem;
-        width: auto;
+
+    .main-content {
+        display: block;
+        float: right;
     }
-    
-    .brand-name h3 {
-        font-size: 1rem;
-        color: white;
+    .main-content h2 {
+        font-size: 1.33rem;
+        font-weight: bold;
+        line-height: 1.2;
+        text-transform: uppercase;
+        background-color: white;
+        padding: 0.75rem 4.5rem;
+        margin-top: 11rem;
+        margin-left: 0;
+        margin-right: 4rem;
     }
-    nav {
+
+    .content {
         display: flex;
-        justify-content: space-between;
-        margin-left: auto;
-        margin-right: 2rem;
+        width: 65%;
+        height: 50%;
+        margin: 0 auto;
+        margin-bottom: 5rem;
     }
-    
-    nav span a {
-        color: seashell;
-        padding: 1rem;
-        text-decoration-line: none;
-        font-size: 1rem;
-    }
-    
-    nav .mob-disp {
-        display: none;
+
+    .phil {
+        display: block;
+        float: left;
+        width: 47.5%;
+        margin-right: 10%;
     }
     
 }
 
-@media screen and (max-width: 425px) {
-
-    body {
-        background-color: red;
-    }
-
+@media screen and (max-width: 640px) {
     .main {
         background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/tortoiseshell-optics/resources/images/glasses-bg.png");
+        height: 17rem;
         background-position: 20%;
         background-repeat: no-repeat;
         background-size: cover;
-        margin-bottom: 3rem;
-        height: 17rem;
-    }
-
-    .header-container {
-        position: fixed;
-        width: 100%;
-        margin: 0 auto;
-        height: 3rem;
-        background-color: cadetblue;
+        margin-bottom: 3.77rem;
     }
     
+    .header-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        height: 3rem;
+        position: absolute;
+        background-color: cadetblue;
+    }
+
     .logo img {
         margin-right: 2rem;
         margin-left: 1rem;
@@ -311,15 +311,126 @@ nav .mob-disp {
     }
     
     nav span a {
-        display: none;
-    }
-    
-    nav .mob-disp {
         color: seashell;
         padding: 1rem;
         text-decoration-line: none;
-        font-size: 1rem;;
+        font-size: 1rem;
+    }
+    
+    .disp {
+        display: none;
+    }
+    
+    .mob-disp {
+        display: block;
+        color: seashell;
+        padding: 1rem;
+        text-decoration-line: none;
+        font-size: 1rem;
+    }
+
+    .main-content {
+        display: block;
+        float: left;
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-content h2 {
+        font-size: 1.33rem;
+        font-weight: bold;
+        line-height: 1.2;
+        text-transform: uppercase;
+        background-color: white;
+        margin-top: 12rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .row {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 3.77rem;
+    }
+    
+    .column {
+        float: left;
+        height: 8rem;
+        margin-bottom: 1.54rem;
+    }
+      
+    .left {
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+    }
+    
+    .middle {
+        width: 100%;
+        text-align: center;
+        margin-right: 6rem;
+    }
+    
+    .right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .content {
+        display: block;
+        width: 100%;
+        height: 50%;
+        margin: 0 auto;
+        margin-bottom: 5rem;
+    }
+    
+    .phil {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 4rem;
+    }
+    
+     .content .phil .heading {
+         background-color: cadetblue;
+         width: 100%;
+         margin-bottom: 1rem;
+    }
+    
+    .content .phil .heading h4 {
+         color: white;
+         font-size: 1rem;
+         text-transform: uppercase;
+         padding-left: 1.25rem;
+         padding-top: 0.5rem;
+         padding-bottom: 0.5rem;
+         font-weight: bold;
+         font-family: Helvetica;
+         text-align: center;
+    }
+    
+    .appoint {
+        width: 100%;
+    }
+    
+    .content .appoint .heading {
+        background-color: cadetblue;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .content .appoint .heading h4 {
+        color: white;
+        font-size: 1rem;
+        text-transform: uppercase;
+        padding-left: 1.25rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-weight: bold;
+        font-family: Helvetica;
+        text-align: center;
     }
     
     
+    
+      
 }
